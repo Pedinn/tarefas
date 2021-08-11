@@ -8,10 +8,13 @@ export default class TaskList extends Component {
         return (
             <SafeAreaView style={{flex: 1, paddingTop: StatusBar.currentHeight}}>
                 <View style={styles.container}>
-                    <ImageBackground source={todayImage}>
+                    <ImageBackground source={todayImage}
+                        style={styles.background}>
 
                     </ImageBackground>
-                    <Text>TaskList</Text>
+                    <View style={styles.taskList}>
+                        <Text>TaskList</Text>
+                    </View>
                 </View>
             </SafeAreaView>
         )
@@ -22,4 +25,10 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
+    background: {
+        flex: 3,
+    },  
+    taskList: {
+        flex: 7,
+    },  
 })
