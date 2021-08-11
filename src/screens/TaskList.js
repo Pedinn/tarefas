@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, SafeAreaView } from 'react-native'
 
 export default class TaskList extends Component {
     render() {
         return (
-            <View>
-                <Text>TaskList</Text>
-            </View>
+            <SafeAreaView>
+                <View>
+                    <Text>TaskList</Text>
+                </View>
+            </SafeAreaView>
         )
     }
 }
