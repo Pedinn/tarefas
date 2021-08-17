@@ -3,14 +3,21 @@ import { View, Text, ImageBackground, StyleSheet, SafeAreaView, StatusBar } from
 
 import todayImage from '../../assets/imgs/today.jpg'
 
+import moment from 'moment'
+import 'moment/locale/pt-br'
+
 export default class TaskList extends Component {
     render() {
+        const today = moment().locale('pt-br').format('ddd, D [de] MMMM')
         return (
             <SafeAreaView style={{flex: 1, paddingTop: StatusBar.currentHeight}}>
                 <View style={styles.container}>
                     <ImageBackground source={todayImage}
                         style={styles.background}>
-
+                        <View>
+                            <Text>Hoje</Text>
+                            <Text>{today}</Text>
+                        </View>
                     </ImageBackground>
                     <View style={styles.taskList}>
                         <Text>TaskList</Text>
