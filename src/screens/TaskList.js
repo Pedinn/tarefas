@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { View, Text, ImageBackground, StyleSheet, SafeAreaView, StatusBar } from 'react-native'
 
-import { useFonts } from '@use-expo/font'
 import commonStyles from '../commonStyles'
 import todayImage from '../../assets/imgs/today.jpg'
 
@@ -11,9 +10,6 @@ import 'moment/locale/pt-br'
 export default class TaskList extends Component {
     render() {
         const today = moment().locale('pt-br').format('ddd, D [de] MMMM')
-        useFonts({
-            'Lato': require('../../assets/fonts/Lato.ttf'),
-          })
         return (
             <SafeAreaView style={{flex: 1, paddingTop: StatusBar.currentHeight}}>
                 <View style={styles.container}>
@@ -47,9 +43,8 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'flex-end',
     },
-    title:{
-        fontFamily: 'Lato',
+    title: {
+        fontFamily: commonStyles.fontFamily,
         fontSize: 50,
-        color: commonStyles.colors.secundary
     }
 })
