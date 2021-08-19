@@ -22,10 +22,10 @@ export default class TaskList extends Component {
                 <View style={styles.container}>
                     <ImageBackground source={todayImage}
                         style={styles.background}>
-                        <View style={styles.titleBar}>
-                            <Text style={styles.title}>Hoje</Text>
-                            <Text style={styles.subTitle}>{today}</Text>
-                        </View>
+                            <View style={styles.titleBar}>
+                                <Text style={styles.title}>Hoje</Text>
+                                <Text style={styles.subTitle}>{today}</Text>
+                            </View>
                     </ImageBackground>
                     <View style={styles.taskList}>
                         <Text>Tarefa #01</Text>
@@ -53,14 +53,14 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
     },
     title: {
-        fontFamily: commonStyles.fontFamily,
+        // fontFamily: commonStyles.fontFamily,
         color: commonStyles.colors.secodary,
         fontSize: 50,
         marginLeft: 20,
         marginBottom: 20,
     },
     subTitle: {
-        fontFamily: commonStyles.fontFamily,
+        // fontFamily: commonStyles.fontFamily,
         color: commonStyles.colors.secodary, 
         fontSize: 20,
         marginLeft: 20,
