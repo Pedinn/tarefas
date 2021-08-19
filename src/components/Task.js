@@ -23,8 +23,8 @@ export default props => {
 function getCheckView(doneAt){
     if(doneAt != null){
         return (
-            <View>
-                <Text>Concluida</Text>
+            <View style={styles.done}>
+                <Icon name='check' size={20} color='#FFF'></Icon>
             </View>
         )
     }else {
@@ -44,8 +44,7 @@ const styles = StyleSheet.create({
     },
     checkContainer: {
         width: "20%",
-        alignItems: 'center',
-        justifyContent: 'center,'
+        alignItems: 'center' 
     },
     peding: {
         height: 25,
@@ -53,5 +52,11 @@ const styles = StyleSheet.create({
         borderRadius: 13,
         borderWidth: 1,
         borderColor: '#555'
+    },
+    done: {
+        height: 25,
+        width: 25,
+        borderRadius: 13,
+        backgroundColor: 'green'
     },
 })
