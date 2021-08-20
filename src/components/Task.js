@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
         borderRadius: 13,
         backgroundColor: 'green',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     desc: {
         // fontFamily: commonStyles.fontFamily,
