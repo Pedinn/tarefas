@@ -6,13 +6,16 @@ import commonStyles from '../commonStyles'
 
 export default props => {
 
+    const doneOrNotStyle = props.doneAt != null ? 
+        { textDecorationLine: 'line-through' } : {}
+
     return (
         <View style={styles.container}>
             <View style={styles.checkContainer}>
                 {getCheckView(props.doneAt)}
             </View>
             <View>
-                <Text style={styles.desc}>{props.desc}</Text>
+                <Text style={[styles.desc, doneOrNotStyle]}>{props.desc}</Text>
                 <Text>{props.estimateAt + ""}</Text>
             </View>
                     
