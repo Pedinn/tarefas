@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 
 import commonStyles from '../commonStyles'
+import fontStyle from '../../node_modules/react-native-vector-icons/Fonts/fontStyle'
 
 export default props => {
 
@@ -60,5 +61,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'green',
         alignItems: 'center',
         justifyContent: 'center'
+    },
+    desc: {
+        // fontFamily: fontStyle.fontFamily
     },
 })
