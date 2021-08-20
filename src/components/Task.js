@@ -62,6 +62,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     desc: {
-        // fontFamily: fontStyle.fontFamily
+        // fontFamily: commonStyles.fontFamily,
+        color: commonStyles.colors.mainText
     },
 })
