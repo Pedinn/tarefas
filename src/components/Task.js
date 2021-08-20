@@ -24,7 +24,7 @@ function getCheckView(doneAt){
     if(doneAt != null){
         return (
             <View style={styles.done}>
-                <Icon name='check' size={20} color='#FFF'></Icon>
+                
             </View>
         )
     }else {
