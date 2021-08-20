@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
+import Icon from 'react-native-vector-icons/Ionicons'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 import commonStyles from '../commonStyles'
@@ -24,7 +25,7 @@ function getCheckView(doneAt){
     if(doneAt != null){
         return (
             <View style={styles.done}>
-                
+                <Icon name='checkmark' size={20} color={'#FFF'}></Icon>
             </View>
         )
     }else {
@@ -57,6 +58,8 @@ const styles = StyleSheet.create({
         height: 25,
         width: 25,
         borderRadius: 13,
-        backgroundColor: 'green'
+        backgroundColor: 'green',
+        alignItems: 'center',
+        justifyContent: 'center'
     },
 })
