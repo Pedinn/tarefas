@@ -12,7 +12,7 @@ export default props => {
                 {getCheckView(props.doneAt)}
             </View>
             <View>
-                <Text>{props.desc}</Text>
+                <Text style={styles.desc}>{props.desc}</Text>
                 <Text>{props.estimateAt + ""}</Text>
             </View>
                     
@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
     },
     desc: {
         // fontFamily: commonStyles.fontFamily,
-        color: commonStyles.colors.mainText
+        color: commonStyles.colors.mainText,
+        fontSize: 15
     },
 })
