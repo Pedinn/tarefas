@@ -8,7 +8,7 @@ import {
     StatusBar,
 } from 'react-native'
 
-import { useFonts } from 'expo/font'
+import { useFonts } from 'expo-font';
 import Lato from './assets/fonts/Lato.ttf'
 import commonStyles from '../commonStyles'
 import todayImage from '../../assets/imgs/today.jpg'
