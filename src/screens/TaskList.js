@@ -8,8 +8,6 @@ import {
     StatusBar,
 } from 'react-native'
 
-import { useFonts } from 'expo-font';
-import Lato from '../../assets/fonts/Lato.ttf'
 import commonStyles from '../commonStyles'
 import todayImage from '../../assets/imgs/today.jpg'
 
@@ -20,7 +18,6 @@ import Task from '../components/Task'
 
 export default class TaskList extends Component {
     render() {
-        const [loaded] = useFonts({Lato,})
         const today = moment().locale('pt-br').format('ddd, D [de] MMMM')
         return (
             <SafeAreaView style={{flex: 1, paddingTop: StatusBar.currentHeight}}>
@@ -59,7 +56,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
     },
     title: {
-        fontFamily: 'Lato',
+        // fontFamily: commonStyles.fontFamily,
         color: commonStyles.colors.secodary,
         fontSize: 50,
         marginLeft: 20,
