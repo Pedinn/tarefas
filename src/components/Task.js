@@ -72,5 +72,6 @@ const styles = StyleSheet.create({
     date: {
         // fontFamily: commonStyles.fontFamily,
         color: commonStyles.colors.subText,
+        fontSize: 12,
     },
 })
