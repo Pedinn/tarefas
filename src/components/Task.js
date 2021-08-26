@@ -2,12 +2,18 @@ import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import Icon from 'react-native-vector-icons/Ionicons'
 
+import moment from 'moment'
+import 'moment/locale/pt-br'
+
 import commonStyles from '../commonStyles'
 
 export default props => {
 
     const doneOrNotStyle = props.doneAt != null ? 
         { textDecorationLine: 'line-through' } : {}
+
+    const date = moment(props.estimateAt).locale('pt-br')
+        .format('ddd, D [de] MMMM')
 
     return (
         <View style={styles.container}>
@@ -16,7 +22,7 @@ export default props => {
             </View>
             <View>
                 <Text style={[styles.desc, doneOrNotStyle]}>{props.desc}</Text>
-                <Text style={styles.date}>{props.estimateAt + ""}</Text>
+                <Text style={styles.date}>{date}</Text>
             </View>
                     
         </View>
