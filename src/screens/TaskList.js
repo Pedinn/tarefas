@@ -67,7 +67,7 @@ export default class TaskList extends Component {
             }
         })
 
-        this.setState({ tasks }, this.visibleTasks)
+        this.setState({ tasks }, this.filterTasks)
     }
    
     render() {
