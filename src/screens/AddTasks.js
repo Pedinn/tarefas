@@ -11,7 +11,13 @@ import {
 
 import commonStyles from '../commonStyles'
 
+const initialState = { desc: '' }
+
 export default class AddTasks extends Component {
+
+    state = {
+        ...initialState
+    }
 
     render() {
         return (
