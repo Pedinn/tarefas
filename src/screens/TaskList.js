@@ -37,6 +37,10 @@ export default class TaskList extends Component {
         }]
     }
 
+    toggleFilter = () => {
+        this.setState({ showDoneTasks: !this.state.showDoneTasks })
+    }
+
     toggleTask = taskId => {
         const tasks = [...this.state.tasks]
         tasks.forEach(task => {
@@ -55,6 +59,12 @@ export default class TaskList extends Component {
                 <View style={styles.container}>
                     <ImageBackground source={todayImage}
                         style={styles.background}>
+                            <View style={styles.iconBar}>
+                                <TouchableOpacity onPress={this.toggleFilter}>
+                                    <Icon name={this.state.showDoneTasks ? 'eye' : 'eye-slash'} 
+                                        size={20} color={commonStyles.colors.secodary}/>
+                                </TouchableOpacity>
+                            </View>
                             <View style={styles.titleBar}>
                                 <Text style={styles.title}>Hoje</Text>
                                 <Text style={styles.subTitle}>{today}</Text>
@@ -98,5 +108,8 @@ const styles = StyleSheet.create({
         fontSize: 20,
         marginLeft: 20,
         marginBottom: 30,
+     },
+     iconBar: {
+        flexDirection: 'row',
      },
 })
