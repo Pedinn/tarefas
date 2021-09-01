@@ -35,7 +35,7 @@ export default class AddTasks extends Component {
                         onChangeText={desc => this.setState({ desc })}
                         value={this.state.desc}/>
                     <View style={styles.buttons}>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={this.props.onCancel}>
                             <Text style={styles.button}>Cancelar</Text>
                         </TouchableOpacity>
                         <TouchableOpacity>
