@@ -24,6 +24,7 @@ import Task from '../components/Task'
 export default class TaskList extends Component {
     state = {
         showDoneTasks: true,
+        visibleTasks: [],
         tasks: [{
             id: Math.random(),
             desc: 'Comprar Livro de React Native',
@@ -37,8 +38,25 @@ export default class TaskList extends Component {
         }]
     }
 
+    componentDidMount = () => {
+        this.filterTasks()
+    }
+
+    
     toggleFilter = () => {
         this.setState({ showDoneTasks: !this.state.showDoneTasks })
+    }
+
+    filterTasks = () => {
+        let visibleTasks = null
+        if(this.state.showDoneTasks) {
+            visibleTasks = [...this.state.tasks]
+        }else {
+            const pending = task => task.doneAt === null
+            visubleTasks = this.state.tasks.filter(pending)
+        }
+
+        this.setState({ visibleTasks })
     }
 
     toggleTask = taskId => {
@@ -71,7 +89,7 @@ export default class TaskList extends Component {
                             </View>
                     </ImageBackground>
                     <View style={styles.taskList}>
-                        <FlatList data={this.state.tasks} 
+                        <FlatList data={this.state.visibleTasks} 
                             keyExtractor={item => `${item.id}`}
                             renderItem={({item}) => <Task {...item} toggleTask={this.toggleTask} />}/>
                     </View>
