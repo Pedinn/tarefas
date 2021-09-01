@@ -20,10 +20,12 @@ import moment from 'moment'
 import 'moment/locale/pt-br'
 
 import Task from '../components/Task'
+import AddTasks from './AddTasks'
 
 export default class TaskList extends Component {
     state = {
         showDoneTasks: true,
+        showAddTasks: true,
         visibleTasks: [],
         tasks: [{
             id: Math.random(),
@@ -75,6 +77,7 @@ export default class TaskList extends Component {
         return (
             <SafeAreaView style={{flex: 1, paddingTop: StatusBar.currentHeight}}>
                 <View style={styles.container}>
+                    <AddTasks isVisible={this.state.showAddTasks}/>
                     <ImageBackground source={todayImage}
                         style={styles.background}>
                             <View style={styles.iconBar}>
