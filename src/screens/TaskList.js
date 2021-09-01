@@ -53,7 +53,7 @@ export default class TaskList extends Component {
             visibleTasks = [...this.state.tasks]
         }else {
             const pending = task => task.doneAt === null
-            visubleTasks = this.state.tasks.filter(pending)
+            visibleTasks = this.state.tasks.filter(pending)
         }
 
         this.setState({ visibleTasks })
@@ -67,7 +67,7 @@ export default class TaskList extends Component {
             }
         })
 
-        this.setState(({ tasks }))
+        this.setState({ tasks }, this.visibleTasks)
     }
    
     render() {
