@@ -30,7 +30,10 @@ export default class AddTasks extends Component {
                 </TouchableWithoutFeedback>
                 <View style={styles.container}>
                     <Text style={styles.header}>Nova Tarefa</Text>
-                    <TextInput style={styles.input}/>
+                    <TextInput style={styles.input}
+                        placeholder={'Informe a descrição...'}
+                        onChangeText={desc => this.setState({ desc })}
+                        value={this.state.desc}/>
                     <View style={styles.buttons}>
                         <TouchableOpacity>
                             <Text style={styles.button}>Cancelar</Text>
