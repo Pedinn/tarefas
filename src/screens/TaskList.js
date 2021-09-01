@@ -77,7 +77,8 @@ export default class TaskList extends Component {
         return (
             <SafeAreaView style={{flex: 1, paddingTop: StatusBar.currentHeight}}>
                 <View style={styles.container}>
-                    <AddTasks isVisible={this.state.showAddTasks}/>
+                    <AddTasks isVisible={this.state.showAddTasks}
+                        onCancel={() => this.setState({ showAddTasks: false })}/>
                     <ImageBackground source={todayImage}
                         style={styles.background}>
                             <View style={styles.iconBar}>
