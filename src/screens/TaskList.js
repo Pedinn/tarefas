@@ -113,6 +113,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         marginHorizontal: 20,
         justifyContent: 'flex-end',
-        marginTop: Platform.OS === 'ios' ? 30 : 10
+        marginTop: Platform.OS === 'ios' ? 40 : 10
      },
 })
