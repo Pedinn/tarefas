@@ -8,7 +8,8 @@ import {
     StatusBar,
     FlatList,
     TouchableOpacity,
-    Platform
+    Platform,
+    Alert,
 } from 'react-native'
 
 import commonStyles from '../commonStyles'
@@ -71,6 +72,23 @@ export default class TaskList extends Component {
 
         this.setState({ tasks }, this.filterTasks)
     }
+
+    addTask = newTask => {
+        if(!newTask.desc || !newTask.desc.trim()) {
+            Alert.alert('Dados Inválidos', 'Descrição não Informada!')
+            return 
+        }
+
+        const tasks = [...this.state.tasks]
+        tasks.push({
+            id: Math.random(),
+            desc: newTask.desc,
+            estimateAt: newTask.date,
+            doneAt: null,
+        })
+
+        this.setState({ tasks, showAddTasks: false }, this.filterTasks)
+    }
    
     render() {
         const today = moment().locale('pt-br').format('ddd, D [de] MMMM')
@@ -78,7 +96,8 @@ export default class TaskList extends Component {
             <SafeAreaView style={{flex: 1, paddingTop: StatusBar.currentHeight}}>
                 <View style={styles.container}>
                     <AddTasks isVisible={this.state.showAddTasks}
-                        onCancel={() => this.setState({ showAddTasks: false })}/>
+                        onCancel={() => this.setState({ showAddTasks: false })}
+                        onSave={this.addTask}/>
                     <ImageBackground source={todayImage}
                         style={styles.background}>
                             <View style={styles.iconBar}>
