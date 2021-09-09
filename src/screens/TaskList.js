@@ -78,11 +78,8 @@ export default class TaskList extends Component {
     addTask = newTask => {
         if(!newTask.desc || !newTask.desc.trim()) {
             Alert.alert('Dados Inválidos', 'Descrição não Informada!')
-            console.log(newTask());
             return 
         }
-
-        
 
         const tasks = [...this.state.tasks]
         tasks.push({

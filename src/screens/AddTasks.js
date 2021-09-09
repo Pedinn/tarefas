@@ -26,7 +26,7 @@ export default class AddTasks extends Component {
     save = () => {
         const newTask = {
             desc: this.state.desc,
-            desc: this.state.date,
+            date: this.state.date
         }
 
         this.props.onSave && this.props.onSave(newTask)
