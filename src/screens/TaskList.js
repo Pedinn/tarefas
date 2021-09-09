@@ -60,6 +60,8 @@ export default class TaskList extends Component {
         }
 
         this.setState({ visibleTasks })
+
+        
     }
 
     toggleTask = taskId => {
@@ -76,8 +78,11 @@ export default class TaskList extends Component {
     addTask = newTask => {
         if(!newTask.desc || !newTask.desc.trim()) {
             Alert.alert('Dados Inválidos', 'Descrição não Informada!')
+            console.log(newTask());
             return 
         }
+
+        
 
         const tasks = [...this.state.tasks]
         tasks.push({
@@ -89,6 +94,7 @@ export default class TaskList extends Component {
 
         this.setState({ tasks, showAddTasks: false }, this.filterTasks)
     }
+
    
     render() {
         const today = moment().locale('pt-br').format('ddd, D [de] MMMM')
