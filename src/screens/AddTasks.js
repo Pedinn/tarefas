@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFF',
     },
     header: {
-        //fontFamily: commonStyles.fontFamily,
+        fontFamily: commonStyles.fontFamily,
         backgroundColor: commonStyles.colors.today,
         color: commonStyles.colors.secodary,
         textAlign: 'center',
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
     },
     input: {
-        //fontFamily: commonStyles.fontFamily,
+        fontFamily: commonStyles.fontFamily,
         height: 40,
         margin: 15,
         backgroundColor: '#FFF',
@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
         color: commonStyles.colors.today 
     },
     date: {
-        //fontFamily: commonStyles.fontFamily,
+        fontFamily: commonStyles.fontFamily,
         fontSize: 20,
         marginLeft: 15,
     },
