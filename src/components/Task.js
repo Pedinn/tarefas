@@ -106,12 +106,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     desc: {
-        // fontFamily: commonStyles.fontFamily,
+        fontFamily: commonStyles.fontFamily,
         color: commonStyles.colors.mainText,
         fontSize: 15
     },
     date: {
-        // fontFamily: commonStyles.fontFamily,
+        fontFamily: commonStyles.fontFamily,
         color: commonStyles.colors.subText,
         fontSize: 12,
     },
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
         marginLeft: 10,
     },
     excludeText: {
-        // fontFamily: commonStyles.fontFamily,
+        fontFamily: commonStyles.fontFamily,
         color: '#FFF',
         fontSize: 20,
         margin: 10,
