@@ -147,14 +147,14 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
     },
     title: {
-        // fontFamily: commonStyles.fontFamily,
+        fontFamily: commonStyles.fontFamily,
         color: commonStyles.colors.secodary,
         fontSize: 50,
         marginLeft: 20,
         marginBottom: 20,
     },
     subTitle: {
-        // fontFamily: commonStyles.fontFamily,
+        fontFamily: commonStyles.fontFamily,
         color: commonStyles.colors.secodary, 
         fontSize: 20,
         marginLeft: 20,
